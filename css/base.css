@@ -487,12 +487,12 @@ section:nth-of-type(odd) {
   overflow: hidden;
 }
 
-.section-header {
+/* .section-header {
   font-weight: bold;
   text-transform: uppercase;
   padding: 20px 40px;
   font-size: 30px;
-}
+} */
 
 .sub-section {
   border-bottom: 1px solid #d5d5d5;
@@ -1053,9 +1053,9 @@ section:nth-of-type(odd) {
     font-size: 20px;
   }
 
-  .section-header{
+  /* .section-header{
     padding: 20px 0;
-  }
+  } */
 
   .sub-section-header {
     flex-wrap: wrap;
