@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title> Chu Han </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+
+    <link rel="icon" type="image/x-icon" href="./css/pics/favicon.ico">
+    <link href="./css/base.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="./css/base-print.css" rel="stylesheet" type="text/css" media="print" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <script src="./js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="./js/functions.js" type="text/javascript"></script>
+
+    <script src="./js/amcharts5/index.js" defer="defer"></script>
+    <script src="./js/amcharts5/wc.js" defer="defer"></script>
+    <script src="./js/amcharts5/themes/Animated.js" defer="defer"></script>
+    <!-- <script src="https://cdn.amcharts.com/lib/5/index.js" defer="defer"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js" defer="defer"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js" defer="defer"></script> -->
+</head>
+
+<body>
+    <header class="navbar-wrapper" id="top-navbar">
+        <div class="home-logo" title="home" aria-label="home" id="homeBtn" onclick="setOnlyOneActive(this.id, '')">
+            <img src="./css/pics/logo.png"></img>
+        </div>
+
+        <div class="hamburger-menu">
+            <div id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <nav class="top-nav">
+            <div class="navbar-nav">
+                <div class="nav-item" id="resumeSectionBtn" onclick="setOnlyOneActive(this.id, 'resumeSection')">
+                    <div class="nav-link">
+                        <span class="icon fa-briefcase"></span>
+                        <span class="text">
+                            Resume
+                        </span>
+                    </div>
+                </div>
+
+                <div class="nav-item" id="projectSectionBtn" onclick="setOnlyOneActive(this.id, 'projectSection')">
+                    <div class="nav-link">
+                        <span class="icon fa-pen"></span>
+                        <span class="text">
+                            Projects
+                        </span>
+                    </div>
+                </div>
+                <div class="nav-item" id="photographySectionBtn"
+                    onclick="setOnlyOneActive(this.id, 'photographySection')">
+                    <div class="nav-link">
+                        <span class="icon fa-camera"></span>
+                        <span class="text">Photography
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <script>
+        const theme = localStorage.getItem('theme');
+        if (theme) {
+            document.documentElement.className = theme;
+            document.documentElement.setAttribute('theme', theme);
+        } else {
+            localStorage.setItem('theme', 'light');
+            document.documentElement.className = 'light';
+            document.documentElement.setAttribute('theme', 'light');
+        }
+
+        $(document).ready(function () {
+            $('#hamburger').click(function () {
+                $('#hamburger').toggleClass("open");
+                $(".top-nav").slideToggle();
+            });
+
+            $(window).resize(function () {
+                if ($(window).width() > 767) {
+                    $(".top-nav").css("display", "flex");
+                } else {
+                    $(".top-nav").css("display", "none");
+                }
+                $('#hamburger').removeClass("open");
+            });
+        });
+    </script>

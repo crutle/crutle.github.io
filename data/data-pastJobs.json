@@ -1,0 +1,141 @@
+[
+    {
+        "id": 1,
+        "year": "2013",
+        "title": "Gift Wrapper",
+        "company" : "Takashimaya Singapore Ltd.",
+        "period": "November - December 2013, 2014, 2017, 2020",
+        "description": [
+            "Fulfilment of customer packaging service requests.",
+            "Demonstrated attention to detail and teamwork skills by assisting with work area set-up, wrap-up, and stock taking."
+        ], 
+        "printable": false
+    },
+    {
+        "id": 2,
+        "year": "2015",
+        "title": "Gift Wrapper Leader",
+        "company" : "Takashimaya Singapore Ltd.",
+        "period": "November - December 2015, 2019",
+        "description": [
+            "Oversaw all aspects of daily operations, including staffing, scheduling, and resource allocation.", 
+            "Facilitated unforeseen events and conflicts between customers and personnel.",
+            "Fulfilment of customer packaging service requests."
+        ],
+        "printable": false
+    },
+    {
+        "id": 3,
+        "year": "2017",
+        "title": "IT Intern",
+        "company" : "Shaw Organisation Pte Ltd.",
+        "period": "October 2016 - February 2017",
+        "description": [
+                {
+                    "department" : "I.C.E Department",
+                    "period" : "October 2016 - February 2017",
+                    "scope": [
+                        "Contributed to the development and testing of a new movie ticketing system, including refactoring existing code to improve its performance and readability.", 
+                        "Collaborated with other interns to develop a mobile chatbot using Azure LUIS and Java to handle movie inquiries and ticket reservation requests."
+                    ],
+                    "awards": [
+                        ""
+                    ]
+                }
+            ],
+        "printable": true
+    },
+    {
+        "id": 4,
+        "year": "2018",
+        "title": "Event Game Marshal (Robocar Poli Toy Carnival)",
+        "company" : "Pro & Pacific Pte Ltd.",
+        "period": "June 2018",
+        "description": [
+            "Delivered customer service and support during event, promptly addressing customer requests and inquiries with efficiency.",
+            "Managed various game booths at the event, actively engaging customers to ensure a positive and enjoyable experience.",
+            "Contributed to the overall cleanliness and organization of the venue by assisting with daily housekeeping before and after operating hours.",
+            "Demonstrated strong teamwork and attention to detail by proficiently setting up and tearing down events."
+        ],
+        "printable": false
+    },
+    {
+        "id": 5,
+        "year": "2018",
+        "title": "Promoter",
+        "company" : "Pro & Pacific Pte Ltd.",
+        "period": "July - August 2018",
+        "description": [
+            "Actively promoted and successfully sold toys to customers in a retail environment."
+        ],
+        "printable": false
+    },
+    {
+        "id": 6,
+        "year": "2019",
+        "title": "IT Intern",
+        "company" : "Lucky Joint Construction Pte Ltd.",
+        "period": "July - August 2019",
+        "description": [
+            "Developed and deployed an ASP.NET Web Application e-Portal using C# to implement a centralized IT asset management system.",
+            "Enabled concurrent access to the e-Portal by deploying it onto the company server."
+        ],
+        "printable": true
+    },
+    {
+        "id": 7,
+        "year": "2021",
+        "title": "Associate Solution Engineer",
+        "company" : "Oracle CAPAC Services Unlimited Company (Singapore Branch)",
+        "period": "September 2021 - June 2024",
+        "description": [
+            {
+                "department" : "Solution Engineering Graduate Program",
+                "period" : "September 2021 - May 2022",
+                "scope": [
+                    "Acquired technical knowledge of Oracle cloud products and soft skills essential for success in a sales role.",
+                    "Built a data ingestion prototype that seamlessly integrates user-provided APIs with the Oracle Autonomous Data Warehouse, leveraging Python and Linux."
+                ],
+                "awards": [
+                    "FY22 Graduate Program - \"GRADhacks\" Hackathon - Best Engagement (January 2022)"
+                ]
+            },
+            {
+                "department" : "Innovation Center, Center of Excellence",
+                "period" : "June 2022 - May 2024",
+                "scope": [
+                    "Quality Assurance Tester with expertise in end-to-end testing, using Apache JMeter and Selenium WebDriver for an Oracle Cloud native asset management and deployment platform, as part of a suite of innovative accelerators.",
+                    "Designed and developed a user-friendly interface for an Oracle Cloud native low-code data democratization framework that seamlessly integrates diverse data sources and targets, using Apache HTTP Server, PHP, HTML/CSS, and JavaScript, as part of a suite of innovative accelerators.",
+                    "Designed and developed a user-friendly interface for an Oracle Cloud native productivity and knowledge platform, facilitating the discovery and linkage of domain-specific knowledge within an enterprise, using Apache HTTP Server, PHP, HTML/CSS, and JavaScript, as part of a suite of innovative accelerators."
+                ],
+                "awards": [
+                    "FY24 Q1 Exceptional Contributor of the Quarter (September 2023)"
+                ]
+            }
+        ],
+        "printable": true
+    },
+    {
+        "id": 8,
+        "year": "2024",
+        "title": "Cloud Engineer",
+        "company" : "Oracle CAPAC Services Unlimited Company (Singapore Branch)",
+        "period": "June 2024 - Present",
+        "description": [
+            {
+                "department" : "Innovation Center, Center of Excellence",
+                "period" : "June 2024 - Present",
+                "scope": [
+                    "Quality Assurance Tester with expertise in end-to-end testing, using Apache JMeter and Selenium WebDriver for an Oracle Cloud native asset management and deployment platform, as part of a suite of innovative accelerators.",
+                    "Designed and developed a user-friendly interface for an Oracle Cloud native low-code data democratization framework that seamlessly integrates diverse data sources and targets, using Apache HTTP Server, PHP, HTML/CSS, and JavaScript, as part of a suite of innovative accelerators.",
+                    "Designed and developed a user-friendly interface for an Oracle Cloud native productivity and knowledge platform, facilitating the discovery and linkage of domain-specific knowledge within an enterprise, using Apache HTTP Server, PHP, HTML/CSS, and JavaScript, as part of a suite of innovative accelerators."
+                ],
+                "awards": [
+                    ""
+                ]
+            }
+        ],
+        "printable": true
+    }
+    
+]

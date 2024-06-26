@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "year": "2013",
+        "title": "Cambridge O'Levels",
+        "school": "CHIJ St' Theresa's Convent",
+        "period": "2010 - 2013",
+        "description": [
+            {
+                "title": "Subjects",
+                "description": [
+                    "English",
+                    "Higher Chinese",
+                    "Chinese",
+                    "Combined Humanities (Elective Geography)",
+                    "Biology", 
+                    "Chemistry",
+                    "Mathematics",
+                    "Additional Mathematics"
+                ]
+            },
+            {
+                "title": "CCA - IJ Youth Mission",
+                "description": [
+                    "Infant Jesus Youth Mission (IJYM) is a mission CCA that provides the students with the opportunities to be a better person for others, by being in the shoes of others, especially the less fortunate. It also offers opportunities to practice leadership and pick up good moral values such as compassion, empathy and respect, through constant reflection and improvision on our actions."
+                ]
+            }
+        ],
+        "printable": false
+    },
+    {
+        "id": 2,
+        "year": "2017",
+        "title": "Diploma in Information Technology",
+        "school": "Singapore Polytechnic",
+        "period": " 2014 - 2017",
+        "description": [
+            {
+                "title": "Year 1",
+                "description": [
+                    "Gained an understanding of database management systems, Infocomm security, Java and object-orientated programming, computing mathematics, digital visual design, web client development using HTML/CSS and jQuery, network fundamentals and application development using C# and Visual Studio."
+                ]
+            },
+            {
+                "title": "Year 2",
+                "description": [
+                    "Gained an understanding of the ethics and laws of IT and media, user interaction design, mobile application development using Java and Android Studio, data structures and algorithms using C++, enterprise business processes, web application development using C#, system development techniques, network management and assurance, and hospitality and tourism operations management."
+                ]
+            },
+            {
+                "title": "Year 3",
+                "description": [
+                    "Gained an understanding of computer forensics and cloud and service computing.",
+                    "Collaborated with a team and developed a time attendance system, Mark-In, for the Human Resource department of Singapore Polytechnic to efficiently monitor staff attendance via biometric authentication and allocate their pay accordingly. Staffs can use the system to monitor their attendance and manage events. The public can also use the system to create an account for registrations of events, attendance taking at the registered events and exchange of business information such as company name and contact information, using QR codes. "
+                ]
+            }
+        ],
+        "resume_description": "",
+        "printable": true
+    },
+    {
+        "id": 3,
+        "year": "2021",
+        "title": "Bachelor of Science (Honours) in Computing and Information Systems (First Class)",
+        "school": "University of London",
+        "period": "2017 - 2021",
+        "description": [
+            {
+                "title": "",
+                "description": [
+                    "Contributed to the development and testing of a new movie ticketing system, including refactoring existing code to improve its performance and readability.",
+                    "Collaborated with other interns to develop a mobile chatbot using Azure Luis and Java to handle movie inquiries and ticket reservation requests."
+                ]
+            }
+        ],
+        "resume_description": "",
+        "printable": true
+    }
+]

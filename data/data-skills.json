@@ -1,0 +1,105 @@
+[
+    {
+        "type": "soft",
+        "name": "Team Player",
+        "weight": 0
+    },
+    {
+        "type": "soft",
+        "name": "Leadership",
+        "weight": 0
+    },
+    {
+        "type": "soft",
+        "name": "Problem Solving",
+        "weight": 0
+    },
+    {
+        "type": "soft",
+        "name": "Attention to Detail",
+        "weight": 0
+    },
+
+
+    {
+        "type": "hard",
+        "name": "HTML/CSS",
+        "weight": 0
+    },
+    {
+        "type": "hard",
+        "name": "C#",
+        "weight": 0
+    },
+    {
+        "type": "hard",
+        "name": "Javascript",
+        "weight": 0
+    },
+    {
+        "type": "hard",
+        "name": "Transact-SQL",
+        "weight": 0
+    },
+
+    {
+        "type": "hard",
+        "name": "Bootstrap",
+        "weight": 0
+    },
+
+    {
+        "type": "hard",
+        "name": "Java",
+        "weight": 0
+    },
+    {
+        "type": "hard",
+        "name": "PHP",
+        "weight": 0
+    },
+    
+    {
+        "type": "hard",
+        "name": "Python",
+        "weight": 0
+    },
+    
+    
+    {
+        "type": "tech",
+        "name": "Oracle Cloud Infrastructure",
+        "weight": 0
+    },
+    
+    {
+        "type": "tech",
+        "name": "ASP.NET Web Apps",
+        "weight": 0
+    },
+    {
+        "type": "tech",
+        "name": "Microsoft Xamarin Forms",
+        "weight": 0
+    },
+    {
+        "type": "tech",
+        "name": "Microsoft SQL Server",
+        "weight": 0
+    },
+    {
+        "type": "tech",
+        "name": "SQL Server Management Studio",
+        "weight": 0
+    },
+    {
+        "type": "tech",
+        "name": "MySQL",
+        "weight": 0
+    },
+    {
+        "type": "tech",
+        "name": "Figma",
+        "weight": 0
+    }
+]
