@@ -1,0 +1,452 @@
+[
+    {
+        "type": "hard",
+        "name": "Angular",
+        "weight": 1
+    },
+    {
+        "type": "hard",
+        "name": "Bootstrap",
+        "weight": 4
+    },
+    {
+        "type": "hard",
+        "name": "C#",
+        "weight": 4
+    },
+    {
+        "type": "hard",
+        "name": "HTML/CSS",
+        "weight": 4
+    },
+    {
+        "type": "hard",
+        "name": "Java",
+        "weight": 4
+    },
+    {
+        "type": "hard",
+        "name": "Python",
+        "weight": 3
+    },
+    {
+        "type": "soft",
+        "name": "Adaptability",
+        "weight": 3
+    },
+    {
+        "type": "soft",
+        "name": "Attention to Detail",
+        "weight": 4
+    },
+    {
+        "type": "soft",
+        "name": "Communication Skills",
+        "weight": 4
+    },
+    {
+        "type": "soft",
+        "name": "Creativity",
+        "weight": 3
+    },
+    {
+        "type": "soft",
+        "name": "Critical Thinking",
+        "weight": 3
+    },
+    {
+        "type": "soft",
+        "name": "Emotional Intelligence",
+        "weight": 3
+    },
+    {
+        "type": "soft",
+        "name": "Leadership",
+        "weight": 4
+    },
+    {
+        "type": "soft",
+        "name": "Problem Solving",
+        "weight": 4
+    },
+    {
+        "type": "soft",
+        "name": "Team Player",
+        "weight": 4
+    },
+    {
+        "type": "soft",
+        "name": "Time Management",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "ASP.NET Web Apps",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "AWS",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "Agile Methodologies",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "AngularJS",
+        "weight": 1
+    },
+    {
+        "type": "tech",
+        "name": "Apache Kafka",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Artificial Intelligence",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Babel",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Big Data",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Bitbucket",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Blockchain",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "CI/CD",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Chai",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Cybersecurity",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Cypress",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Data Analysis",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Data Visualization",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Design Patterns",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "DevOps",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Docker",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Elasticsearch",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Ethical Hacking",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Figma",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Git",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "GitHub",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Google Cloud Platform",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "GraphQL",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "GraphQL APIs",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Grunt",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Gulp",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "IT Support",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "JWT",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Java",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "Jest",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Kanban",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Kubernetes",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "LESS",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Linux",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "MacOS",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Machine Learning",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Microservices Architecture",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Microsoft SQL Server",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "Microsoft Xamarin Forms",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "Mocha",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "MongoDB",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "MySQL",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "NestJS",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Network Administration",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Next.js",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Node.js",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "OAuth",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "OAuth2",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Oracle Cloud Infrastructure",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "Oracle JET (OJET)",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Penetration Testing",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "PostgreSQL",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "RESTful APIs",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "RabbitMQ",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "React.js",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "Redis",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Redux",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "SQL Server Management Studio",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "SVN",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Sass",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Scrum",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Selenium Testing",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Serverless Architecture",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Transact-SQL",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "TypeScript",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "UX/UI Design",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Unix",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Vue.js",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "Waterfall",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Webpack",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Windows Server",
+        "weight": 3
+    }
+]

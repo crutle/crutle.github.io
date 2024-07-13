@@ -1,105 +1,168 @@
 [
     {
-        "type": "soft",
-        "name": "Team Player",
-        "weight": 0
+        "type": "hard",
+        "name": "",
+        "weight": 1
     },
-    {
-        "type": "soft",
-        "name": "Leadership",
-        "weight": 0
-    },
-    {
-        "type": "soft",
-        "name": "Problem Solving",
-        "weight": 0
-    },
-    {
-        "type": "soft",
-        "name": "Attention to Detail",
-        "weight": 0
-    },
-
-
     {
         "type": "hard",
-        "name": "HTML/CSS",
-        "weight": 0
+        "name": "",
+        "weight": 1
     },
     {
         "type": "hard",
         "name": "C#",
-        "weight": 0
+        "weight": 4
+    },
+    {
+        "type": "hard",
+        "name": "End-to-End Testing",
+        "weight": 3
+    },
+    {
+        "type": "hard",
+        "name": "HTML/CSS",
+        "weight": 4
+    },
+    {
+        "type": "hard",
+        "name": "Java",
+        "weight": 4
     },
     {
         "type": "hard",
         "name": "Javascript",
-        "weight": 0
-    },
-    {
-        "type": "hard",
-        "name": "Transact-SQL",
-        "weight": 0
-    },
-
-    {
-        "type": "hard",
-        "name": "Bootstrap",
-        "weight": 0
-    },
-
-    {
-        "type": "hard",
-        "name": "Java",
-        "weight": 0
+        "weight": 4
     },
     {
         "type": "hard",
         "name": "PHP",
-        "weight": 0
+        "weight": 3
     },
-    
     {
         "type": "hard",
         "name": "Python",
-        "weight": 0
+        "weight": 3
     },
-    
+    {
+        "type": "hard",
+        "name": "Typescript",
+        "weight": 2
+    },
+
+
     
     {
-        "type": "tech",
-        "name": "Oracle Cloud Infrastructure",
-        "weight": 0
+        "type": "soft",
+        "name": "",
+        "weight": 1
     },
-    
+    {
+        "type": "soft",
+        "name": "Adaptability",
+        "weight": 4
+    },
+    {
+        "type": "soft",
+        "name": "Attention to Detail",
+        "weight": 4
+    },
+    {
+        "type": "soft",
+        "name": "Communication",
+        "weight": 3
+    },
+    {
+        "type": "soft",
+        "name": "Continuous Learning",
+        "weight": 3
+    },
+    {
+        "type": "soft",
+        "name": "Creativity",
+        "weight": 3
+    },
+    {
+        "type": "soft",
+        "name": "Leadership",
+        "weight": 3
+    },
+    {
+        "type": "soft",
+        "name": "Problem-Solving",
+        "weight": 4
+    },
+    {
+        "type": "soft",
+        "name": "Teamwork",
+        "weight": 3
+    },
+    {
+        "type": "soft",
+        "name": "Time Management",
+        "weight": 4
+    },
+
+
+
+    {
+        "type": "tech",
+        "name": "Apache HTTP Server",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Apache JMeter",
+        "weight": 3
+    },
     {
         "type": "tech",
         "name": "ASP.NET Web Apps",
-        "weight": 0
+        "weight": 4
     },
     {
         "type": "tech",
-        "name": "Microsoft Xamarin Forms",
-        "weight": 0
+        "name": "Azure",
+        "weight": 2
     },
     {
         "type": "tech",
-        "name": "Microsoft SQL Server",
-        "weight": 0
-    },
-    {
-        "type": "tech",
-        "name": "SQL Server Management Studio",
-        "weight": 0
-    },
-    {
-        "type": "tech",
-        "name": "MySQL",
-        "weight": 0
+        "name": "Bootstrap",
+        "weight": 4
     },
     {
         "type": "tech",
         "name": "Figma",
-        "weight": 0
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "Git",
+        "weight": 2
+    },
+    {
+        "type": "tech",
+        "name": "MySQL",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "Oracle Cloud (OCI)",
+        "weight": 4
+    },
+    {
+        "type": "tech",
+        "name": "Oracle JET (OJET)",
+        "weight": 2
+    },
+    {
+        "type": "tech",
+        "name": "Selenium",
+        "weight": 3
+    },
+    {
+        "type": "tech",
+        "name": "SQL Server Management Studio",
+        "weight": 4
     }
 ]

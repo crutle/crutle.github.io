@@ -1,4 +1,5 @@
-const lang_introduction = "Ready to elevate your digital landscape? With a robust skillset that spans Apache JMeter to Selenium WebDriver and fluency in frameworks and languages like ASP.NET Web Apps, HTML/CSS, JavaScript, C#, and PHP, I excel at weaving seamless interfaces and sturdy backends into the fabric of any platform. Let’s stitch together your next project and tailor a solution that fits perfectly. Interested in threading some ideas? Let’s connect.";
+const lang_introduction1 = "Ready to elevate your digital landscape? With a robust skillset that spans Apache JMeter to Selenium WebDriver and fluency in frameworks and languages like ASP.NET Web Apps, HTML/CSS, JavaScript, C#, and PHP, I excel at weaving seamless interfaces and sturdy backends into the fabric of any platform. Let’s stitch together your next project and tailor a solution that fits perfectly. Interested in threading some ideas? Let’s connect.";
+const lang_introduction = "Crafting seamless digital solutions with expertise in backend and frontend technologies.";
 const lang_collapse_all = "Collapse All";
 const lang_expand_all = "Expand All";
 const lang_no_results = "No Results";
@@ -44,28 +45,28 @@ function includeHTML() {
     /* Loop through a collection of all HTML elements: */
     z = document.getElementsByTagName("*");
     for (i = 0; i < z.length; i++) {
-      elmnt = z[i];
-      /*search for elements with a certain atrribute:*/
-      file = elmnt.getAttribute("w3-include-html");
-      if (file) {
-        /* Make an HTTP request using the attribute value as the file name: */
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            /* Remove the attribute, and call this function once more: */
-            elmnt.removeAttribute("w3-include-html");
-            includeHTML();
-          }
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+            /* Make an HTTP request using the attribute value as the file name: */
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                    if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                    /* Remove the attribute, and call this function once more: */
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                }
+            }
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /* Exit the function: */
+            return;
         }
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /* Exit the function: */
-        return;
-      }
     }
-  }
+}
 
 /*********  Home ***********/
 function init() {
@@ -95,7 +96,7 @@ function init() {
 
     loadSkills();
 
-    loadProjects();   
+    loadProjects();
     includeHTML();
 
     setTimeout(function () { getFlickr(); }, 5000);
@@ -226,6 +227,7 @@ function setHomeText() {
                     }
                 });
                 homeTextElement.innerHTML = originalText;
+                homeTextElement.innerHTML = lang_introduction; // Remove this to show keyword highlights.
                 // $('#intro').html(formattedText);
             }
         }
@@ -253,25 +255,27 @@ function toggleAccordionCard(sectionId, isExpanded) {
 }
 
 function expandAccordionCard(elementId, sectionId) {
+    /*
     // Make sure only 1 is expanded at all times.
-    // var expandedElements = document.querySelectorAll(".df-modal-accordion.active");
-    // var clickedElement = document.getElementById(elementId);
-    // if (expandedElements.length == 0) {
-    //   clickedElement.classList.add("active");
-    // } else {
-    //   if (!clickedElement.classList.contains("active")) {
-    //     expandedElements.forEach(el => {
-    //       el.classList.remove('active');
-    //     });
-    //     clickedElement.classList.add("active");
-    //     // console.log("expand");
-    //   } else {
-    //     expandedElements.forEach(el => {
-    //       el.classList.remove('active');
-    //     });
-    //     // console.log("collapse");
-    //   }
-    // }
+    var expandedElements = document.querySelectorAll(".df-modal-accordion.active");
+    var clickedElement = document.getElementById(elementId);
+    if (expandedElements.length == 0) {
+      clickedElement.classList.add("active");
+    } else {
+      if (!clickedElement.classList.contains("active")) {
+        expandedElements.forEach(el => {
+          el.classList.remove('active');
+        });
+        clickedElement.classList.add("active");
+        // console.log("expand");
+      } else {
+        expandedElements.forEach(el => {
+          el.classList.remove('active');
+        });
+        // console.log("collapse");
+      }
+    }
+    */
     var clickedElement = document.getElementById(elementId);
     var parentElement = clickedElement.parentElement.parentElement;
 
@@ -631,46 +635,6 @@ function loadSkills() {
     var targetId = "skillWordCloud";
     var urlStr = "./data/data-skills.json";
 
-    keywordWordCloudRoot = am5.Root.new(targetId);
-    keywordWordCloudRoot.setThemes([am5themes_Animated.new(keywordWordCloudRoot)]);
-
-    // Word Cloud Wrapper
-    var container = keywordWordCloudRoot.container.children.push(am5.Container.new(keywordWordCloudRoot, {
-        width: am5.percent(100),
-        height: am5.percent(100),
-        // layout: root.verticalLayout
-        // layout: root.horizontalLayout      
-    }));
-
-    // Chart Data
-    var series = container.children.push(am5wc.WordCloud.new(keywordWordCloudRoot, {
-        categoryField: "name",
-        valueField: "weight",
-        minFontSize: 22,
-        calculateAggregates: true // for heat rules to work,
-    }));
-
-    // Chart Label
-    // var title = container.children.push(am5.Label.new(keywordWordCloudRoot, {
-    //     text: title,
-    //     fontSize: 22,
-    //     // fontWeight: 400,
-    //     fontFamily: "Oracle Sans Semi Bold",
-    //     fill: am5.color(0x3d3d3d),
-    //     x: am5.percent(50),
-    //     y: am5.percent(0),
-    //     centerX: am5.percent(50)
-    // }));
-
-    // Words
-    series.labels.template.setAll({
-        padding: 5,
-        // fontFamily: "Oracle Sans",
-        minFontSize: am5.percent(50),
-        // fill: am5.color(0x3b82f6),
-        // cursorOverStyle: "pointer"
-    });
-
     $.ajax({
         method: "GET",
         url: urlStr,
@@ -686,63 +650,136 @@ function loadSkills() {
             var jsonObj = data;
             var objCount = Object.keys(jsonObj).length;
             if (objCount > 0) {
-                var words = jsonObj;
-
-                if (words.length == 0) {
-                    var noDataTitle = container.children.push(am5.Label.new(keywordWordCloudRoot, {
-                        text: lang_no_results,
-                        fontSize: 22,
-                        // fontWeight: 400,
-                        // fontFamily: "Oracle Sans ",
-                        fill: am5.color(0x5f5f5f),
-                        x: am5.percent(50),
-                        y: am5.percent(50),
-                        centerX: am5.percent(50)
-                    }));
-                } else {
-                    // series.labels.template.events.on("click", function (ev) {
-                    //     // console.log("Clicked on:", ev.target);
-                    //     console.log("Clicked on:", ev.target.dataItem.get("category"));
-                    //     console.log("hover item:", ev.target.dataItem.get("value"));
-                    // });
-
-                    // series.labels.template.set("tooltipText", "{category}: [bold]{value}[/]");
-
-                    // series.animate({
-                    //     key: "startAngle",
-                    //     to: 180,
-                    //     loops: Infinity,
-                    //     duration: 2000,
-                    //     easing: am5.ease.yoyo(am5.ease.cubic)
-                    // });
-
-                    series.set("heatRules", [{
-                        target: series.labels.template,
-                        dataField: "value",
-                        min: am5.color(0x000000),
-                        max: am5.color(0x3b82f6),
-                        key: "fill",
-                        // minFontSize: am5.percent(50)
-                    }]);
-
-                    series.data.setAll(words);
-                }
-                // }
+                renderWordCloud(targetId, jsonObj);
             } else {
-                var noDataTitle = container.children.push(am5.Label.new(keywordWordCloudRoot, {
-                    text: lang_no_results,
-                    fontSize: 22,
-                    // fontWeight: 400,
-                    // fontFamily: "Oracle Sans ",
-                    fill: am5.color(0x5f5f5f),
-                    x: am5.percent(50),
-                    y: am5.percent(50),
-                    centerX: am5.percent(50)
-                }));
+                $("#skillsWordCloudContainer").parent().hide();
+                $("#educationContent").parent().css("border-bottom", "none");
             }
         }
     }).fail(function (xhr, status, error) {
     });
+}
+
+const hexToRgb = (hex) => {
+    const bigint = parseInt(hex.slice(1), 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    return { r, g, b };
+};
+
+function renderWordCloud(targetID, jsonObj) { 
+    // const WORD_LIMIT = 50;
+    const TYPE_LIMIT = 20;
+    const WEIGHT_CONSTANT = 10;
+    /*
+    // a. Sort by Type, then Name
+    var sortedByName = [...jsonObj];
+    sortedByName.sort((a, b) => {
+        // First, sort by type (ascending)
+        if (a.type < b.type) return -1;
+        if (a.type > b.type) return 1;
+
+        // If types are the same, sort by name (ascending)
+        return a.name.localeCompare(b.name);
+    });
+    console.log(sortedByName);  
+
+    jsonObj = sortedByName;
+    */
+
+    // b. Sort by Type, then Weights
+    var sortedByWeights = [...jsonObj];
+    sortedByWeights.sort((a, b) => {
+        // First, sort by type (ascending)
+        if (a.type < b.type) return -1;
+        if (a.type > b.type) return 1;
+
+        // If types are the same, sort by weight (ascending)
+        return b.weight - a.weight;        
+    });
+    jsonObj = sortedByWeights;
+    
+    // c. Sort by Weights only
+    // jsonObj = jsonObj.sort((a, b) => b.weight - a.weight);
+
+    // a. Limit to WORD_LIMIT
+    // jsonObj.length = WORD_LIMIT;
+
+    // b. Limit to TYPE_LIMIT
+    var hardSkillsArr = jsonObj.filter((d) => d.type === "hard");
+    var techSkillsArr = jsonObj.filter((d) => d.type === "tech");
+    var softSkillsArr = jsonObj.filter((d) => d.type === "soft");
+    hardSkillsArr.length = TYPE_LIMIT;
+    techSkillsArr.length = TYPE_LIMIT;
+    softSkillsArr.length = TYPE_LIMIT;
+
+    jsonObj = [hardSkillsArr, techSkillsArr, softSkillsArr].flat(); 
+    console.log(jsonObj);   
+
+    const maxCount = Math.max(...jsonObj.map(d => d.weight));
+    const minCount = Math.min(...jsonObj.map(d => d.weight));
+    const getColor = (weight) => {
+        const intensity = (weight - minCount) / (maxCount - minCount);
+        const r = Math.floor(baseColor.r * intensity);
+        const g = Math.floor(baseColor.g * intensity);
+        const b = Math.floor(baseColor.b * intensity);
+        return `rgb(${r}, ${g}, ${b})`;
+    };
+    // const baseColor = hexToRgb('#3b82f6');
+    const baseColor = hexToRgb('#3b82f6');
+    // const baseColor = 'red';
+
+    const data = {
+        labels: jsonObj.map((d) => d.name),
+        datasets: [{
+            label: '',
+            data: jsonObj.map(d => (d.weight) * WEIGHT_CONSTANT),
+            fit: true,
+            // randomRotationSeed: 'some-random-seed'
+        }]
+    };
+
+    const config = {
+        type: 'wordCloud',
+        data: data,
+        options: {
+            elements: {
+                word: {
+                    color: jsonObj.map(d => getColor(d.weight)),
+                    hoverColor: 'black',
+                    hoverWeight: 'bold',
+                    // hoverSize: 50
+                },
+            },
+            title: {
+                display: false,
+                text: '',
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+          
+                tooltip: {
+                    callbacks: {
+                        label: function (tooltipItem) {
+                            return `${tooltipItem.dataset.label} ${(tooltipItem.formattedValue / WEIGHT_CONSTANT) - 1}`;
+                        }
+                    }
+                }
+            },
+            layout: {
+                padding: (WEIGHT_CONSTANT*2)
+            },
+            maintainAspectRatio: false,
+            responsive: true,
+            aspectRatio: 3 / 2
+        }
+    };
+
+    const ctx = document.getElementById(targetID).getContext('2d');
+    new Chart(ctx, config);
 }
 
 //#endregion Resume
