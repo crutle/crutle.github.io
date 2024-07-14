@@ -715,7 +715,7 @@ function renderWordCloud(targetID, jsonObj) {
     softSkillsArr.length = TYPE_LIMIT;
 
     jsonObj = [hardSkillsArr, techSkillsArr, softSkillsArr].flat(); 
-    console.log(jsonObj);   
+    // console.log(jsonObj);   
 
     const maxCount = Math.max(...jsonObj.map(d => d.weight));
     const minCount = Math.min(...jsonObj.map(d => d.weight));
