@@ -163,6 +163,9 @@ function setNavProgress() {
             }
         });
 
+        
+        console.log(currentSection);
+        console.log("===========");
         if (currentSection) {
             let activeButtonId = null;
             buttons.forEach(button => {
@@ -179,6 +182,8 @@ function setNavProgress() {
             }
         }
 
+        console.log(window.innerHeight + window.scrollY);
+        console.log(document.body.scrollHeight);
         if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
             $('.top-nav .nav-item').removeClass("active");
             $(`#photographySectionBtn`).addClass("active");
