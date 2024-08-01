@@ -501,12 +501,12 @@ function loadCertifications() {
                         var item = $('<a>', {
                             class: "clickable",
                             html: title,
+                            target: "_blank",
                             href: url
                         }).appendTo(row);
                     } else {
                         var item = $('<a>', {
                             html: title,
-                            href: url
                         }).appendTo(row);
                     }
                 }
