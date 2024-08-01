@@ -37,7 +37,7 @@
         "year": 2022,
         "obtainedDate": "05/12/2022",
         "expiryDate": null,
-        "url": "../data/certs/Oracle Cloud Infrastructure 2021 Certified Architect Associate [1ZO-1072-21].jpg"
+        "url": "/data/certs/Oracle Cloud Infrastructure 2021 Certified Architect Associate [1ZO-1072-21].jpg"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "year": 2023,
         "obtainedDate": "02/14/2023",
         "expiryDate": null,
-        "url": "../data/certs/ChuHan - Great Team Player.jpg"
+        "url": "/data/certs/ChuHan - Great Team Player.jpg"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "year": 2023,
         "obtainedDate": "10/11/2023",
         "expiryDate": null,
-        "url": "../data/certs/JAPAC CE FY24 Spot Award e-Cert ChuHan.jpg"
+        "url": "/data/certs/JAPAC CE FY24 Spot Award e-Cert ChuHan.jpg"
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "year": 2023,
         "obtainedDate": "09/01/2023",
         "expiryDate": null,
-        "url": "../data/certs/Q1_CoE_CHChan.jpg"
+        "url": "/data/certs/Q1_CoE_CHChan.jpg"
     },
     {
         "id": 8,
@@ -69,6 +69,6 @@
         "year": 2024,
         "obtainedDate": "02/07/2024",
         "expiryDate": null,
-        "url": "../data/certs/Recognition e-Cert ChuHan.jpg"
+        "url": "/data/certs/Recognition e-Cert ChuHan.jpg"
     }
 ]

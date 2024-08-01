@@ -237,15 +237,18 @@ function setHomeText() {
 
 
 //#region Resume
-function toggleAccordionCard(sectionId, isExpanded) {
+function toggleAllAccordion(sectionId, isExpanded) {
     var accordionElements = $(`[id^="${sectionId}"] .card-accordion`);
     for (var i = 0; i < accordionElements.length; i++) {
         if (isExpanded == 0) {
             accordionElements[i].classList.add('active');
             $(`#${sectionId} .card`).addClass('card-focus');
+            $(`#${sectionId} .card-accordion-content`).slideDown(400);
+            // 
         } else {
             accordionElements[i].classList.remove('active');
             $(`#${sectionId} .card.card-focus`).removeClass('card-focus');
+            $(`#${sectionId} .card-accordion-content`).hide();
         }
     }
 
@@ -282,9 +285,12 @@ function expandAccordionCard(elementId, sectionId) {
     if (clickedElement.classList.contains('active')) {
         clickedElement.classList.remove('active');
         parentElement.classList.remove('card-focus');
+        $(`#${elementId}`).siblings('.card-accordion-content').hide();
     } else {
         clickedElement.classList.add("active");
         parentElement.classList.add('card-focus');
+        console.log(elementId);
+        $(`#${elementId}`).siblings('.card-accordion-content').slideDown(500);
     }
 
     // var accordionIdPrefix = elementId.substring(0, elementId.length - 2);
@@ -420,7 +426,7 @@ function loadWorkExperience() {
                             } else {
                                 var cardDescriptionContainer = $("<div>", {
                                     class: "card-description ",
-                                    style: "margin-bottom: 40px;"
+                                    // style: "margin-bottom: 40px;"
                                 }).appendTo(bodyRow);
                             }
 
@@ -818,11 +824,11 @@ function expandProjectAccordion(buttonId) {
         $('.project-content.active').slideUp(200, function () {
             $('.project-content.active').removeClass('active');
             $('#' + elementId + 'Section').addClass('active');
-            $('#' + elementId + 'Section').slideDown(1000);
+            $('#' + elementId + 'Section').slideDown(500);
         });
     } else {
         $('#' + elementId + 'Section').addClass('active');
-        $('#' + elementId + 'Section').slideDown(1000);
+        $('#' + elementId + 'Section').slideDown(500);
     }
 }
 //#endregion Projects

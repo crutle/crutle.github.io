@@ -15,8 +15,13 @@
   --background-color-highlight-1: #FFD700;
   --background-color-highlight-2: #4285F4;
   --background-color-highlight-3: #F08080;
-  
+  --background-color-primary-color-50: rgba(59, 130, 246, 0.5);
+  --background-color-primary-color-darken-3: #193e7b;
+  --background-color-accordion: #e8f0fe;
+  /* #f8f8f8;  #f2f2f2; */
+
   --border-color: #e5e5e5;
+  --border-primary-color: #9dc0fa;
   --border-primary-color: #3b82f6;
   --border-primary-color-30: #3b82f64d;
   --border-secondary-color: #cccccc4d;
@@ -590,12 +595,13 @@ section:nth-of-type(odd) {
 .card {
   border-radius: 25px;
   border: 3px solid var(--border-color);
-  background: var(--background-color-tertiary-30);
-  color: var(--text-color-primary);
+  background-color: var(--button-primary);
+  color: var(--text-color-white);
 }
 
 .card:has(.card-accordion.active) {
-  background: var(--background-color-tertiary);
+  color: var(--text-color-secondary);
+  background-color: var(--background-color-accordion);
 }
 
 /* accordion */
@@ -616,23 +622,26 @@ section:nth-of-type(odd) {
 }
 
 .card-accordion-content {
-  padding: 0 18px;
+  /* padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   position: absolute;
-  left: -1000px;
+  left: -1000px; */
+  display: none;
+  padding: 0 40px; 
 }
 
-.card-accordion.active+div {
-  position: initial;
+/* .card-accordion.active+div { */
+  /* display: block; */
+  /* position: initial;
   opacity: 1;
-  transition: max-height 1s ease-in;
-  max-height: 100vh;
-  overflow: hidden;
+  /* transition: max-height 1s ease-in;
+  max-height: 100vh; */
+  /*overflow: hidden;
   cursor: default;
   display: flex;
-  flex-wrap: wrap;
-}
+  flex-wrap: wrap;  */
+/* } */
 
 .card-accordion:hover .card-company,
 .card-accordion:hover .card-period {
@@ -645,6 +654,15 @@ section:nth-of-type(odd) {
   background: none;
   color: var(--text-color-secondary);
 }
+
+.active .card-title{
+  color: var(--text-color-primary);
+}
+.active .card-company, .active .card-period{
+  color: var(--text-color-secondary);
+}
+
+
 
 .card-accordion>div .fa-chevron-down {
   display: block;
@@ -674,7 +692,7 @@ section:nth-of-type(odd) {
 }
 
 .card-company {
-  color: var(--text-color-secondary);
+  /* color: var(--text-color-secondary); */
   font-size: 14px;
 }
 
@@ -683,22 +701,25 @@ section:nth-of-type(odd) {
 }
 
 .card-period {
-  color: var(--text-color-secondary);
+  /* color: var(--text-color-secondary); */
   font-size: 14px;
   margin: 0;
 }
 
 .card-description>li {
-  padding: 8px 0;
+  font-size: 14px;
+  line-height: 40px;
 }
 
 .card-description {
-  padding: 0 5% 40px 5%;
+  color: var(--text-color-secondary);
   width: 100%;
+  padding-bottom: 40px;
 }
 
 .section-label {
   text-decoration: underline;
+  color: var(--text-color-primary);    
 }
 
 .timeline-node-year {
@@ -747,10 +768,12 @@ section:nth-of-type(odd) {
 }
 
 .awards-list {
-  padding: 10px 0;
+  padding: 4px 0;
   font-style: italic;
-  color: var(--text-color-secondary);
+  color: var(--background-color-highlight-2);
   text-align: center;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .sub-header-year {
