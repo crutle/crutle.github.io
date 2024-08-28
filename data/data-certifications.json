@@ -70,5 +70,13 @@
         "obtainedDate": "02/07/2024",
         "expiryDate": null,
         "url": "/data/certs/Recognition e-Cert ChuHan.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Oracle Cloud Infrastructure 2024 Certified Architect Associate [1ZO-1072-24]",
+        "year": 2024,
+        "obtainedDate": "08/28/2024",
+        "expiryDate": null,
+        "url": "/data/certs/Oracle Cloud Infrastructure 2024 Certified Architect Associate [1ZO-1072-24].pdf"
     }
 ]
