@@ -73,7 +73,7 @@ var displayMode = 0;
 function init() {
     const displayModeVal = new URLSearchParams(window.location.search).get('mode');
     if (displayModeVal != undefined && displayModeVal) {
-        displayMode = parseInt(displayModeVal);
+        displayMode = parseInt(displayModeVal) == 0 || parseInt(displayModeVal) == 1 ? parseInt(displayModeVal) : 0;
     }
 
     $('#hamburger').click(function () {
