@@ -9,7 +9,8 @@
            "<b>Customer Service</b>: Fulfilled customer packaging service requests.",
             "<b>Operational Support</b>: Demonstrated attention to detail and teamwork by assisting with work area setup, wrap-up, and stock taking."
         ],
-        "printable": false
+        "printable": false,
+        "displayMode": [1]
     },
     {
         "id": 2,
@@ -22,7 +23,8 @@
             "<b>Conflict Resolution</b>: Facilitated resolution of unforeseen events and customer-personnel conflicts.",
             "<b>Customer Fulfillment</b>: Fulfilled customer packaging service requests efficiently."
         ],
-        "printable": false
+        "printable": false,
+        "displayMode": [1]
     },
     {
         "id": 3,
@@ -43,7 +45,8 @@
                 ]
             }
         ],
-        "printable": true
+        "printable": true,
+        "displayMode": [0, 1]
     },
     {
         "id": 4,
@@ -57,7 +60,8 @@
             "<b>Operational Support</b>: Contributed to the event's overall success by handling housekeeping duties and efficient event setup/teardown.",
             "<b>Teamwork</b>: Demonstrated strong teamwork and attention to detail throughout the event."
         ],
-        "printable": false
+        "printable": false,
+        "displayMode": [1]
     },
     {
         "id": 5,
@@ -69,7 +73,8 @@
             "<b>Sales</b>: Actively promoted and successfully sold toys to customers in a retail environment.",
             "<b>Customer Service</b>: Provided excellent customer service by addressing customer inquiries and resolving issues effectively."
         ],
-        "printable": false
+        "printable": false,
+        "displayMode": [1]
     },
     {
         "id": 6,
@@ -90,7 +95,8 @@
                 "awards": []
             }
         ],
-        "printable": true
+        "printable": true,
+        "displayMode": [0, 1]
     },
     {
         "id": 7,
@@ -128,7 +134,8 @@
                 ]
             }
         ],
-        "printable": true
+        "printable": true,
+        "displayMode": [0, 1]
     },
     {
         "id": 8,
@@ -154,6 +161,7 @@
                 ]
             }
         ],
-        "printable": true
+        "printable": true,
+        "displayMode": [0, 1]
     }
 ]

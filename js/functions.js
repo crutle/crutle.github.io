@@ -68,8 +68,14 @@ function includeHTML() {
     }
 }
 
+var displayMode = 0;
 /*********  Home ***********/
 function init() {
+    const displayModeVal = new URLSearchParams(window.location.search).get('mode');
+    if (displayModeVal != undefined && displayModeVal) {
+        displayMode = parseInt(displayModeVal);
+    }
+
     $('#hamburger').click(function () {
         $('#hamburger').toggleClass("open");
         $(".top-nav").slideToggle();
@@ -163,7 +169,7 @@ function setNavProgress() {
             }
         });
 
-        
+
         console.log(currentSection);
         console.log("===========");
         if (currentSection) {
@@ -342,124 +348,127 @@ function loadWorkExperience() {
                     var period = jsonObj[i].period;
                     var description = jsonObj[i].description;
                     var printable = jsonObj[i].printable;
+                    var displayModeArr = jsonObj[i].displayMode;
                     var multi_desc = description.reduce((count, current) => current.department, 0);
 
-                    // Right Timeline
-                    var rightContainerObj = $("<div>", {
-                        class: "timeline-card-container card-right"
-                    }).prependTo($(`#${timelineSectionId}`));
 
-                    var timelineYear = $("<div>", {
-                        id: "year-" + id,
-                        class: "even-row timeline-node-year",
-                        html: year,
-                    }).appendTo(rightContainerObj);
-                    if (prevYear == year) {
-                        $(`#year-${parseInt(id) - 1}`).remove();
-                    }
-                    prevYear = year;
+                    if (displayModeArr.includes(displayMode)) {
+                        // Right Timeline
+                        var rightContainerObj = $("<div>", {
+                            class: "timeline-card-container card-right"
+                        }).prependTo($(`#${timelineSectionId}`));
 
-                    var cardObj = $("<div>", {
-                        class: "card",
-                    }).appendTo(rightContainerObj);
-
-                    var headerRow = $("<div>", {
-                        class: "card-header-row card-accordion",
-                        id: "experienceAccordion-" + i,
-                        onclick: `expandAccordionCard('experienceAccordion-${i}', '${contentSectionId}')`
-                    }).appendTo(cardObj);
-
-                    var headerRow1 = $("<div>", {
-                        class: "card-row",
-                    }).appendTo(headerRow);
-                    var cardJobTitle = $("<span>", {
-                        class: "card-title ",
-                        html: title
-                    }).appendTo($(headerRow1));
-                    var downIcon = $("<i>", {
-                        class: "fa-chevron-down accordionIcon-" + i
-                    }).appendTo(headerRow1);
-                    var upIcon = $("<i>", {
-                        class: "fa-chevron-up accordionIcon-" + i
-                    }).appendTo(headerRow1);
-
-                    var headerRow2 = $("<div>", {
-                        class: "card-row",
-                    }).appendTo(headerRow);
-                    var cardCompany = $("<p>", {
-                        class: "card-company",
-                        html: company
-                    }).appendTo(headerRow2);
-
-                    var headerRow3 = $("<div>", {
-                        class: "card-row",
-                    }).appendTo(headerRow);
-                    var cardWorkPeriod = $("<p>", {
-                        class: "small card-period",
-                        html: period
-                    }).appendTo(headerRow3);
-
-                    var bodyRow = $("<div>", {
-                        class: "card-body-row card-accordion-content",
-                    }).appendTo(cardObj);
-
-                    if (multi_desc == undefined) {
-                        var descStr = "";
-                        var cardDescriptionContainer = $("<div>", {
-                            class: "card-description ",
-                        }).appendTo(bodyRow);
-                        for (h in description) {
-                            var cardDescription = $("<li>", {
-                                html: description[h]
-                            }).appendTo(cardDescriptionContainer);
+                        var timelineYear = $("<div>", {
+                            id: "year-" + id,
+                            class: "even-row timeline-node-year",
+                            html: year,
+                        }).appendTo(rightContainerObj);
+                        if (prevYear == year) {
+                            $(`#year-${parseInt(id) - 1}`).remove();
                         }
-                    } else {
-                        var descriptionObj = description;
-                        for (i in descriptionObj) {
-                            var dept = description[i].department;
-                            var deptPeriod = description[i].period;
-                            var scopeObj = description[i].scope;
-                            var awardsArr = description[i].awards;
+                        prevYear = year;
 
-                            var awardStr = "";
+                        var cardObj = $("<div>", {
+                            class: "card",
+                        }).appendTo(rightContainerObj);
+
+                        var headerRow = $("<div>", {
+                            class: "card-header-row card-accordion",
+                            id: "experienceAccordion-" + i,
+                            onclick: `expandAccordionCard('experienceAccordion-${i}', '${contentSectionId}')`
+                        }).appendTo(cardObj);
+
+                        var headerRow1 = $("<div>", {
+                            class: "card-row",
+                        }).appendTo(headerRow);
+                        var cardJobTitle = $("<span>", {
+                            class: "card-title ",
+                            html: title
+                        }).appendTo($(headerRow1));
+                        var downIcon = $("<i>", {
+                            class: "fa-chevron-down accordionIcon-" + i
+                        }).appendTo(headerRow1);
+                        var upIcon = $("<i>", {
+                            class: "fa-chevron-up accordionIcon-" + i
+                        }).appendTo(headerRow1);
+
+                        var headerRow2 = $("<div>", {
+                            class: "card-row",
+                        }).appendTo(headerRow);
+                        var cardCompany = $("<p>", {
+                            class: "card-company",
+                            html: company
+                        }).appendTo(headerRow2);
+
+                        var headerRow3 = $("<div>", {
+                            class: "card-row",
+                        }).appendTo(headerRow);
+                        var cardWorkPeriod = $("<p>", {
+                            class: "small card-period",
+                            html: period
+                        }).appendTo(headerRow3);
+
+                        var bodyRow = $("<div>", {
+                            class: "card-body-row card-accordion-content",
+                        }).appendTo(cardObj);
+
+                        if (multi_desc == undefined) {
                             var descStr = "";
-
-                            if (i == descriptionObj.length - 1) {
-                                var cardDescriptionContainer = $("<div>", {
-                                    class: "card-description ",
-                                }).appendTo(bodyRow);
-                            } else {
-                                var cardDescriptionContainer = $("<div>", {
-                                    class: "card-description ",
-                                    // style: "margin-bottom: 40px;"
-                                }).appendTo(bodyRow);
-                            }
-
-                            var cardDepartment = $("<div>", {
-                                class: "section-label",
-                                html: dept
-                            }).appendTo($(cardDescriptionContainer));
-                            if (awardsArr.length > 0 && awardsArr != "") {
-                                var awardsLabel = $("<div>", {
-                                    class: "awards-list",
-                                }).appendTo(cardDescriptionContainer);
-                                for (j in awardsArr) {
-                                    var cardAwards = $("<p>", {
-                                        html: awardsArr[j] + "<br/>"
-                                    }).appendTo(awardsLabel);
-                                }
-                            }
-
-                            for (k in scopeObj) {
+                            var cardDescriptionContainer = $("<div>", {
+                                class: "card-description ",
+                            }).appendTo(bodyRow);
+                            for (h in description) {
                                 var cardDescription = $("<li>", {
-                                    html: scopeObj[k]
+                                    html: description[h]
                                 }).appendTo(cardDescriptionContainer);
+                            }
+                        } else {
+                            var descriptionObj = description;
+                            for (i in descriptionObj) {
+                                var dept = description[i].department;
+                                var deptPeriod = description[i].period;
+                                var scopeObj = description[i].scope;
+                                var awardsArr = description[i].awards;
+
+                                var awardStr = "";
+                                var descStr = "";
+
+                                if (i == descriptionObj.length - 1) {
+                                    var cardDescriptionContainer = $("<div>", {
+                                        class: "card-description ",
+                                    }).appendTo(bodyRow);
+                                } else {
+                                    var cardDescriptionContainer = $("<div>", {
+                                        class: "card-description ",
+                                        // style: "margin-bottom: 40px;"
+                                    }).appendTo(bodyRow);
+                                }
+
+                                var cardDepartment = $("<div>", {
+                                    class: "section-label",
+                                    html: dept
+                                }).appendTo($(cardDescriptionContainer));
+                                if (awardsArr.length > 0 && awardsArr != "") {
+                                    var awardsLabel = $("<div>", {
+                                        class: "awards-list",
+                                    }).appendTo(cardDescriptionContainer);
+                                    for (j in awardsArr) {
+                                        var cardAwards = $("<p>", {
+                                            html: awardsArr[j] + "<br/>"
+                                        }).appendTo(awardsLabel);
+                                    }
+                                }
+
+                                for (k in scopeObj) {
+                                    var cardDescription = $("<li>", {
+                                        html: scopeObj[k]
+                                    }).appendTo(cardDescriptionContainer);
+                                }
                             }
                         }
                     }
                 }
             }
-
         }
     }).fail(function (xhr, status, error) {
     });
@@ -679,7 +688,7 @@ const hexToRgb = (hex) => {
     return { r, g, b };
 };
 
-function renderWordCloud(targetID, jsonObj) { 
+function renderWordCloud(targetID, jsonObj) {
     // const WORD_LIMIT = 50;
     const TYPE_LIMIT = 20;
     const WEIGHT_CONSTANT = 10;
@@ -707,10 +716,10 @@ function renderWordCloud(targetID, jsonObj) {
         if (a.type > b.type) return 1;
 
         // If types are the same, sort by weight (ascending)
-        return b.weight - a.weight;        
+        return b.weight - a.weight;
     });
     jsonObj = sortedByWeights;
-    
+
     // c. Sort by Weights only
     // jsonObj = jsonObj.sort((a, b) => b.weight - a.weight);
 
@@ -725,7 +734,7 @@ function renderWordCloud(targetID, jsonObj) {
     techSkillsArr.length = TYPE_LIMIT;
     softSkillsArr.length = TYPE_LIMIT;
 
-    jsonObj = [hardSkillsArr, techSkillsArr, softSkillsArr].flat(); 
+    jsonObj = [hardSkillsArr, techSkillsArr, softSkillsArr].flat();
     // console.log(jsonObj);   
 
     const maxCount = Math.max(...jsonObj.map(d => d.weight));
@@ -771,7 +780,7 @@ function renderWordCloud(targetID, jsonObj) {
                 legend: {
                     display: false
                 },
-          
+
                 tooltip: {
                     callbacks: {
                         label: function (tooltipItem) {
@@ -781,7 +790,7 @@ function renderWordCloud(targetID, jsonObj) {
                 }
             },
             layout: {
-                padding: (WEIGHT_CONSTANT*2)
+                padding: (WEIGHT_CONSTANT * 2)
             },
             maintainAspectRatio: false,
             responsive: true,
