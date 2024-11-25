@@ -40,6 +40,9 @@
                     "<b>Project Contribution</b>: Contributed to the development and testing of a new movie ticketing system. Improved code performance and readability through refactoring.",
                     "<b>Chatbot Development</b>: Collaborated with team to develop a mobile chatbot using Azure LUIS and Java for movie inquiries and ticket reservations."
                 ],
+                "resumeScope": [
+                    "Tested and refactored code of a new movie ticketing system, for performance optimization.", "Collaborated on developing a mobile chatbot using Azure Luis and Java for movie inquiries and ticket reservations, enhancing user experience and streamlining the reservation process."
+                ],
                 "awards": [
                     ""
                 ]
@@ -126,8 +129,9 @@
                     "<b>Project Involvement</b>: Contributed to a suite of innovative accelerators."
                   ],
                 "resumeScope": [
-                    "QA Tester: Conducted end-to-end testing for Oracle Cloud asset management using JMeter and Selenium WebDriver.",
-                    "Web Developer: Designed & developed user-friendly web interfaces for Oracle Cloud data integration & knowledge management platforms (PHP, HTML, CSS, JS)."
+                    "<b>QA Tester</b>: Conducted end-to-end testing for Oracle Cloud asset management using JMeter and Selenium WebDriver.",
+                    "<b>Web Developer</b>: Designed and developed user-friendly interfaces for Oracle Cloud-native platforms, leveraging Apache HTTP Server, PHP, HTML/CSS, and JavaScript.",
+                    "<li>Created a productivity platform with knowledge analytics and low-code data democratization framework.</li>"
                 ],
                 "awards": [
                     "FY24 Q1 Exceptional Contributor of the Quarter (September 2023)"
@@ -148,13 +152,11 @@
                 "department": "Innovation Center, Center of Excellence",
                 "period": "June 2024 - Present",
                 "scope": [
-                    "<b>Quality Assurance</b>: Conducted end-to-end testing for <i>Oracle Cloud native asset management and deployment platform</i>. Utilized Apache JMeter and Selenium WebDriver for test automation.",
-                    "<b>Web Development</b>: Designed and developed user-friendly web interfaces for <i>Oracle Cloud native data integration and knowledge management platforms</i>. Employed Apache HTTP Server, PHP, HTML, CSS, and JavaScript for development.",
-                    "<b>Project Involvement</b>: Contributed to a suite of innovative accelerators."
+                    "<b>UI/UX Architect</b>: Designed and developed user-friendly interfaces for Oracle Cloud-native platforms, leveraging Apache HTTP Server, PHP, HTML/CSS, and JavaScript",
+                    "<b>Productivity Platform</b>:  Created a productivity platform with knowledge analytics, low-code data democratization framework, configurator and orchestrator. "
                   ],
                 "resumeScope": [
-                    "QA Tester: Conducted end-to-end testing for Oracle Cloud asset management using JMeter and Selenium WebDriver.",
-                    "Web Developer: Designed & developed user-friendly web interfaces for Oracle Cloud data integration & knowledge management platforms (PHP, HTML, CSS, JS)."
+                    "<b>UI/UX Architect</b>: Designed and developed user-friendly interfaces for Oracle Cloud-native platforms, leveraging Apache HTTP Server, PHP, HTML/CSS, and JavaScript.", "<li>Created a productivity platform with knowledge analytics, low-code data democratization framework, configurator and orchestrator.</li>"
                 ],
                 "awards": [
                     ""
