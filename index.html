@@ -8,7 +8,6 @@
 
     <link rel="icon" type="image/x-icon" href="./css/pics/favicon.ico">
     <link href="./css/base.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="./css/base-print.css" rel="stylesheet" type="text/css" media="print" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
@@ -22,7 +21,7 @@
 </head>
 
 <body>
-    <header class="navbar-wrapper no-print" id="top-navbar">
+    <header class="navbar-wrapper" id="top-navbar">
         <div class="home-logo" title="home" aria-label="home" id="homeBtn" onclick="setOnlyOneActive(this.id, '')">
             <img src="./css/pics/logo.png"></img>
         </div>
@@ -79,7 +78,7 @@
     </script>
 
     <main class="body-container">
-        <section id="homeSection" class="no-print">
+        <section id="homeSection">
             <div class="section-header">
                 <div class="word-cloud-container" id="skillsWordCloudContainer">
                     <canvas id="skillWordCloud"></canvas>
@@ -99,7 +98,7 @@
             </div>
         </section>
 
-        <section id="resumeSection" class="no-print">
+        <section id="resumeSection">
             <!-- <div class="section-header"></div> -->
             <div class="sub-section">
                 <div class="sub-section-header">
@@ -139,67 +138,7 @@
             </div>
         </section>
 
-        <!-- <section id="resumeSection-print" class="print-only">-->
-        <section id="resumeSection-print" class="">
-            <!-- <div class="section-header"></div> -->
-            <h1><a href="https://crutle.github.io/">Chan</a></h1>
-            <div id="resumeContact-print">
-                <div><i style="background-image: url('./css/pics/location-dot-solid.svg'); background-repeat: no-repeat; width: 12px; height: 12px; display: inline-block; margin: 0 4px;"></i>Singapore, Singapore</div>
-                <div><i style="background-image: url('./css/pics/phone-solid.svg'); background-repeat: no-repeat; width: 12px; height: 12px; display: inline-block; margin: 0 4px;"></i>+65 9010 7959</div>
-                <div><a href="mailto: chanchuhan@yahoo.com.sg"></a><i style="background-image: url('./css/pics/envelope-solid.svg'); background-repeat: no-repeat; width: 12px; height: 12px; display: inline-block; margin: 0 4px;"></i>chanchuhan@yahoo.com.sg</div>
-                <div><a href="linkedin.com/in/chan-chu-han/"><i style="background-image: url('./css/pics/linkedin-brands-solid.svg'); background-repeat: no-repeat; width: 12px; height: 12px; display: inline-block; margin: 0 4px;"></i>linkedin.com/in/chan-chu-han/</a></div>
-            </div>
-
-            <div class="sub-section"></div>
-                <div class="sub-section-header">
-                    Executive Summary
-                </div>
-
-                <div class="content-row" id="execSummaryContent-print">
-                    <p>UI/UX Architect and Quality Assurance (QA) tester with 3 years of experience in building and testing robust
-                        enterprise solutions. Proficient in both frontend development using HTML, CSS, JavaScript, and PHP, as well as
-                        backend testing with Apache JMeter and Selenium WebDriver. Demonstrated expertise in delivering high-quality
-                        Oracle Cloud-based applications, including asset management, data integration, knowledge management, and
-                        configurator platforms. Passionate about creating innovative solutions that enhance user experience and drive
-                        business value.</p>
-                </div>
-            </div>
-            <div class="sub-section">
-                <div class="sub-section-header">
-                    Experience
-                </div>
-
-                <div class="content-row" id="workExperienceContent-print">
-                </div>
-            </div>
-
-            <div class="sub-section">
-                <div class="sub-section-header">
-                    Certifications
-                </div>
-                <div class="content-row" id="certificationContent-print"></div>
-            </div>
-
-            <div class="sub-section">
-                <div class="sub-section-header">
-                    Education
-                </div>
-
-                <div class="content-row" id="educationContent-print"></div>
-            </div>
-
-            <div class="sub-section">
-                <div class="sub-section-header">
-                    Skills
-                </div>
-
-                <div class="content-row" id="skillsContent-print"></div>
-            </div>
-
-            
-        </section>
-
-        <section id="projectSection" class="no-print">
+        <section id="projectSection">
             <!-- <div class="section-header"></div> -->
 
             <div class="sub-section">
@@ -227,7 +166,7 @@
                 </div>
         </section>
 
-        <section id="photographySection" class="no-print">
+        <section id="photographySection">
             <!-- <div class="section-header">  </div> -->
             <div id="photoAlbumContainer">
                 <div id="loader-container">
