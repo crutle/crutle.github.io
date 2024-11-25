@@ -85,9 +85,6 @@ body {
   -ms-overflow-style: none;
 }
 
-.print-only{
-  display: none;
-}
 
 /***************** Scrollbar ****************/
 @-moz-document url-prefix() {
@@ -202,18 +199,6 @@ body {
 .fa-building::after {
   font-family: "Font Awesome 6 Free Solid";
   content: "\f1ad";
-  font-style: normal;
-}
-
-.fa-location-dot::after {
-  font-family: "Font Awesome 6 Free Solid";
-  content: "\f3c5";
-  font-style: normal;
-}
-
-.fa-phone::after {
-  font-family: "Font Awesome 6 Free Solid";
-  content: "\f095";
   font-style: normal;
 }
 
@@ -585,46 +570,6 @@ section:nth-of-type(odd) {
   padding: 75px 10%;
 }
 
-/***************** Print Content ****************/
-.content-line{
-padding: 8px 0;
-text-align: justify;
-}
-/* .content-line ul li{
-  text-align: justify;
-} */
-
-.content-sub-row{
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 1%;
-  
-}
-
-.job-title {
-  width: 49%;
-}
-
-.job-company {
-  padding-bottom: 8px;
-}
-
-.text-align-left{
-  text-align: left;
-}
-
-.text-align-right{
-  text-align: right;
-}
-
-ul  {
-  margin: 0;
-}
-ul li  {
-  padding-bottom: 4px;
-}
 /***************** Resume  ****************/
 /* timeline - container - vertical ruler */
 .timeline-container {
