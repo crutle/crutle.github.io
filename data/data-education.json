@@ -26,7 +26,9 @@
                 ]
             }
         ],
-        "printable": false
+        "resume_title": "<b>GCE O-Level</b> | CHIJ St Theresa’s Convent | 2010 - 2013",
+        "resume_description": "",
+        "printable": true
     },
     {
         "id": 2,
@@ -55,7 +57,8 @@
                 ]
             }
         ],
-        "resume_description": "",
+        "resume_title": "<b>Diploma in Information Technology</b> | Singapore Polytechnic | 2014 - 2017",
+        "resume_description": "Final Year Project – Collaborated with a team and developed a time attendance system, Mark-In, for the Human Resource department of Singapore Polytechnic to efficiently monitor staff attendance via biometric authentication and allocate their pay accordingly. Staffs can use the system to monitor their attendance and manage events. The public can also use the system to create an account for registrations of events, attendance taking at the registered events and exchange of business information such as company name and contact information, using QR codes.",
         "printable": true
     },
     {
@@ -73,7 +76,8 @@
                 ]
             }
         ],
-        "resume_description": "",
+        "resume_title": "<b>BSc in Computing and Information Systems, First Class Honours</b> | University of London | 2017 - 2021",
+        "resume_description": "Final Year Project – Developed a tertiary college mobile application, MySIM, with the implementation of an artificially intelligent chatbot, using Xamarin Forms and C# to enhance one's study experience in the Singapore Institute of Management (SIM).  ",
         "printable": true
     }
 ]

@@ -1,0 +1,118 @@
+@media print {
+    /* Adjust font size and line height for readability */
+    body {
+      font-size: 12pt;
+      line-height: 1;
+    }
+  
+    /* Set page margins and orientation */
+    @page {
+      margin: 1in;
+      size: A4;
+      orientation: portrait;
+    }
+  
+    /* Remove background colors and images */
+    body, html {
+      background: none;
+    }
+  
+    /* Remove unnecessary elements */
+    header, footer, nav, aside, .no-print {
+      display: none !important;
+    }
+  
+    .print-only{
+        display: block;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    p{
+      text-align: justify;
+  }
+
+  .text-align-left{
+    text-align: left;
+  }
+  
+  .text-align-right{
+    text-align: right;
+  }
+
+    #resumeContact-print{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 4px;
+        justify-content: space-between;
+        font-size: 12px;
+        padding-bottom: 4px;
+    }
+
+    #resumeContact-print > div i{
+        vertical-align: middle;
+    }
+    
+    .sub-section{
+      margin: 8px 0;
+    }
+
+    .sub-section-header{
+      border-bottom: 1px solid black;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 4px 0;
+    }   
+
+    
+.content-line{
+  padding: 8px 0 ;
+  text-align: justify;
+  /* border: 1px solid; */
+  }
+  
+  .content-sub-row{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1%;
+    margin-top: 4px;
+  }
+  
+  .job-title {
+    width: 49%;
+  }
+  
+  .job-company {
+    padding-bottom: 8px;
+    /* text-transform: uppercase; */
+  }
+  
+  ul  {
+    margin: 0;
+  }
+  ul li  {
+    padding-bottom: 4px;
+  }
+
+  #certificationContent-print a{
+    display: block;
+    margin-top: 4px;
+  }
+
+  .education-title{
+    white-space: nowrap;
+    padding-bottom: 8px;
+  }
+
+}

@@ -75,7 +75,22 @@ function init() {
     if (displayModeVal != undefined && displayModeVal) {
         displayMode = parseInt(displayModeVal) == 0 || parseInt(displayModeVal) == 1 ? parseInt(displayModeVal) : 0;
     }
+    
+    // var isPrinting;
+    // if (window.location.protocol === 'file:') {
+    //     console.log('Page is being viewed as a local file');
+    //     isPrinting = false;
+    //     const currentTitle = document.title;
+    //     if (currentTitle != "Chu Han"){
+    //         changeDocumentTitle('Chu Han');
+    //         return false;
+    //     }
+    // } else {
+    //     isPrinting = detectPrintMode();
+    // }
 
+    // console.log(isPrinting);
+    // if (!isPrinting){
     $('#hamburger').click(function () {
         $('#hamburger').toggleClass("open");
         $(".top-nav").slideToggle();
@@ -106,6 +121,57 @@ function init() {
     includeHTML();
 
     setTimeout(function () { getFlickr(); }, 5000);
+// }
+}
+
+function detectPrintMode() {
+    window.addEventListener('beforeprint', () => {
+        const currentTitle = document.title;
+        if (!currentTitle.startsWith("ChanChuHan")) {
+            changeDocumentTitle(newTitle);
+            return true;
+        }
+    });
+
+    window.addEventListener('afterprint', () => {
+        const currentTitle = document.title;
+        if (currentTitle != "Chu Han") {
+            changeDocumentTitle('Chu Han');
+            return false;
+        }
+    });
+
+    if (window.matchMedia('print').matches) {
+        var newTitle = "ChanChuHan_CV_" + getCurrentDate();
+        const currentTitle = document.title;
+        if (!currentTitle.startsWith("ChanChuHan")) {
+            changeDocumentTitle(newTitle);
+            return true;
+        }
+    }
+
+    // Check for specific browser properties
+    if (typeof window.print === 'function' && window.print.toString().indexOf('[native code]') !== -1) {
+        var newTitle = "ChanChuHan_CV_" + getCurrentDate();
+        const currentTitle = document.title;
+        if (!currentTitle.startsWith("ChanChuHan")) {
+            changeDocumentTitle(newTitle);
+            return true;
+        }
+    }
+    return false;
+}
+
+function changeDocumentTitle(newTitle) {
+    document.title = newTitle;
+}
+
+function getCurrentDate() {
+    const date = new Date();
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = date.toLocaleString('default', { month: 'short' });
+    const year = date.getFullYear();
+    return `${day}${month}${year}`;
 }
 
 function setNavBar() {
@@ -169,9 +235,6 @@ function setNavProgress() {
             }
         });
 
-
-        console.log(currentSection);
-        console.log("===========");
         if (currentSection) {
             let activeButtonId = null;
             buttons.forEach(button => {
@@ -188,8 +251,6 @@ function setNavProgress() {
             }
         }
 
-        console.log(window.innerHeight + window.scrollY);
-        console.log(document.body.scrollHeight);
         if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
             $('.top-nav .nav-item').removeClass("active");
             $(`#photographySectionBtn`).addClass("active");
@@ -347,10 +408,9 @@ function loadWorkExperience() {
                     var company = jsonObj[i].company;
                     var period = jsonObj[i].period;
                     var description = jsonObj[i].description;
-                    var printable = jsonObj[i].printable;
+                    var isPrintable = jsonObj[i].printable;
                     var displayModeArr = jsonObj[i].displayMode;
                     var multi_desc = description.reduce((count, current) => current.department, 0);
-
 
                     if (displayModeArr.includes(displayMode)) {
                         // Right Timeline
@@ -467,6 +527,70 @@ function loadWorkExperience() {
                             }
                         }
                     }
+
+                    // if (isPrintable) {
+                    //     var workExpContainer = $("#workExperienceContent-print");
+
+                    //     var resumeRow = $("<div>", {
+                    //         class: "content-line"
+                    //     }).prependTo(workExpContainer);
+                    //     var resumeTitlePeriod = $("<div>", {
+                    //         class: "content-sub-row"
+                    //     }).appendTo(resumeRow);
+                    //     var resumeTitle = $("<div>", {
+                    //         class: "job-title text-align-left",
+                    //         style: "font-weight: bold;",
+                    //         html: title
+                    //     }).appendTo(resumeTitlePeriod);
+                    //     var resumePeriod = $("<div>", {
+                    //         class: "job-title text-align-right",
+                    //         style: "font-style: italic",
+                    //         html: period
+                    //     }).appendTo(resumeTitlePeriod);
+
+                    //     var resumeCompany = $("<div>", {
+                    //         class: "content-sub-row"
+                    //     }).appendTo(resumeRow);
+                    //     var resumeCompanyName = $("<div>", {
+                    //         class: "job-company",
+                    //         html: company
+                    //     }).appendTo(resumeCompany);
+
+                    //     var resumeScope = $("<div>", {
+                    //     }).appendTo(resumeRow);
+
+
+                    //     for (j in description) {
+                    //         // var awardsArr = description[j]["awards"];
+                    //         // if (awardsArr && awardsArr.length > 0 && awardsArr != "") {
+                    //         //     for (j in awardsArr) {
+                    //         //         var bulletPoint = $("<li>", {
+                    //         //             html: awardsArr[j]
+                    //         //         }).appendTo(resumeScopeRow);
+                    //         //     }
+                    //         // }
+
+                    //         var resumeScopeArr = description[j]["resumeScope"];
+                    //         var resumeScopeRow = $("<ul>", {
+                    //         }).appendTo(resumeScope);
+
+                    //         if (resumeScopeArr && resumeScopeArr.length > 0 && resumeScopeArr != "") {
+                    //             for (l in resumeScopeArr) {
+                    //                 if (resumeScopeArr[l].startsWith("<li>")) {
+                    //                     var bulletPoint = $("<li>", {
+                    //                         style: "list-style: circle; margin-left: 20px; padding-bottom: 4px;",
+                    //                         html: resumeScopeArr[l]
+                    //                     }).appendTo(resumeScopeRow);
+                    //                 } else {
+                    //                     var bulletPoint = $("<li>", {
+                    //                         html: resumeScopeArr[l]
+                    //                     }).appendTo(resumeScopeRow);
+                    //                 }
+
+                    //             }
+                    //         }
+                    //     }
+                    // }
                 }
             }
         }
@@ -499,6 +623,7 @@ function loadCertifications() {
                     var title = sortedArr[i].title;
                     var year = sortedArr[i].year;
                     var url = sortedArr[i].url;
+                    var isPrintable = sortedArr[i].printable;
 
                     if (parseInt(year) != parseInt(currentYear)) {
                         currentYear = parseInt(year);
@@ -523,6 +648,20 @@ function loadCertifications() {
                             html: title,
                         }).appendTo(row);
                     }
+
+                    // if (isPrintable) {
+                    //     var certContainer = $("#certificationContent-print ul");
+                    //     if (url != "" && url != null) {
+                    //         var listItem = $('<li>', {
+                    //         }).appendTo(certContainer);
+                    //         var item = $('<a>', {
+                    //             class: "clickable",
+                    //             html: title,
+                    //             target: "_blank",
+                    //             href: url
+                    //         }).appendTo(listItem);
+                    //     }
+                    // }
                 }
             }
         }
@@ -560,7 +699,7 @@ function loadEducation() {
                         var school = jsonObj[i].school;
                         var period = jsonObj[i].period;
                         var descriptionObj = jsonObj[i].description;
-                        var printable = jsonObj[i].printable;
+                        var isPrintable = jsonObj[i].printable;
                         var project_id = jsonObj[i].project_id;
                         var project_name = jsonObj[i].project_name;
 
@@ -643,6 +782,46 @@ function loadEducation() {
                                 }).appendTo(cardDescriptionContainer);
                             }
                         }
+
+
+                        // if (isPrintable) {
+                        //     var educationContainer = $("#educationContent-print");
+
+                        //     var resumeTitle = jsonObj[i].resume_title;
+                        //     var resumeDescription = jsonObj[i].resume_description;
+
+                        //     if (resumeDescription) {
+                        //         var resumeRow = $("<div>", {
+                        //             class: "content-line"
+                        //         }).prependTo(educationContainer);
+                        //         var resumeTitleRow = $("<div>", {
+                        //             class: "content-sub-row"
+                        //         }).appendTo(resumeRow);
+                        //         var resumeTitle = $("<div>", {
+                        //             class: "education-title",
+                        //             html: resumeTitle
+                        //         }).appendTo(resumeTitleRow);
+
+                        //         var resumeDescRow = $("<ul>", {
+                        //         }).appendTo(resumeRow);
+
+                        //         var resumeDesc = $("<li>", {
+                        //             class: "",
+                        //             html: resumeDescription
+                        //         }).appendTo(resumeDescRow);
+                        //     } else {
+                        //         var resumeRow = $("<div>", {
+                        //             class: "content-line"
+                        //         }).appendTo(educationContainer);
+                        //         var resumeTitleRow = $("<div>", {
+                        //             class: "content-sub-row"
+                        //         }).appendTo(resumeRow);
+                        //         var resumeTitle = $("<div>", {
+                        //             class: "education-title",
+                        //             html: resumeTitle
+                        //         }).appendTo(resumeTitleRow);
+                        //     }
+                        // }
                     }
                 }
             }

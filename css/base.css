@@ -85,6 +85,9 @@ body {
   -ms-overflow-style: none;
 }
 
+.print-only{
+  display: none;
+}
 
 /***************** Scrollbar ****************/
 @-moz-document url-prefix() {
@@ -199,6 +202,18 @@ body {
 .fa-building::after {
   font-family: "Font Awesome 6 Free Solid";
   content: "\f1ad";
+  font-style: normal;
+}
+
+.fa-location-dot::after {
+  font-family: "Font Awesome 6 Free Solid";
+  content: "\f3c5";
+  font-style: normal;
+}
+
+.fa-phone::after {
+  font-family: "Font Awesome 6 Free Solid";
+  content: "\f095";
   font-style: normal;
 }
 
